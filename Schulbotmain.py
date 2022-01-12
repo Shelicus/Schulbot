@@ -39,7 +39,6 @@ import random
 import requests
 from Verarbeitung import *
 from datetime import datetime
-import discord
 from discord.ext import commands
 import asyncio
 
@@ -86,7 +85,7 @@ client = commands.Bot(
 async def on_connect():
         print("[Ich habe mich eingeloggt]...")
         client.loop.create_task(aufgabe())
-        client.loop.create_task(change_status())
+        #client.loop.create_task(change_status())
 
 # --------------------------------------------------------------------------------------------------------
 #   (Auto)    Befehl - Rolenzuteilung mit Reaktionen für neue Nutzer | Command - role on reaction
@@ -94,84 +93,43 @@ async def on_connect():
 
 # Wird am Start im Chat angezeigt | Shown for new users
 
-
 async def aufgabe():
     global ausfuehrung
     if ausfuehrung == 0:
         ausfuehrung = 1
         try:
-            willkommen_channel = client.get_channel(channel_ids("willkommen_channel_id"))
-
+            willkommen_channel = client.get_channel(767326314059268096)
 #Zum Löschen der alten Nachrichten
             try:
-                await willkommen_channel.purge()
+                #await willkommen_channel.purge()
+                pass
             except:
-                print('Fehler beim löschen')
-
-            embed_willkommen1 =discord.Embed(title="Willkommen:", description='''**Willkommen auf dem Paul von Denis Realschule Plus und Fachoberschule Server. Bitte reagiere auf einen dieser Nachrichten um Rechte auf dem Server zu bekommen, sowie deiner Klasse zugeordnet zu werden. Dieser Server wird von Schüler der Schule geführt.**''', color=0x11ff00)
-            embed_willkommen1.add_field(name="👍 für Member", value ="🐻 für Developer", inline = True)
-            embed_willkommen1.add_field(name="🐬 für Streamer", value="-", inline=True)
-            willkommen_nachricht1 = await willkommen_channel.send(embed=embed_willkommen1)
-            await willkommen_nachricht1.add_reaction('👍')
-            await willkommen_nachricht1.add_reaction('🐻')
-            await willkommen_nachricht1.add_reaction('🐬')
-
-            embed_willkommen2 = discord.Embed(color=0x11ff00)
-            embed_willkommen2.add_field(name="⚔ für Jahrgang 5", value="-", inline=True)
-            embed_willkommen2.add_field(name="🎳 für Jahrgan 6", value="💡 für Klasse 7a", inline=True)
-            embed_willkommen2.add_field(name="📁 für Klasse 7b", value="🐘 für Klasse 7c", inline=True)
-            embed_willkommen2.add_field(name="💼 für Klasse 7d", value="🦉 für Jahrgang 7", inline=True)
-            embed_willkommen2.add_field(name="⚡  für Klasse 8a", value="👴 für Klasse 8b", inline=True)
-            willkommen_nachricht2 = await willkommen_channel.send(embed=embed_willkommen2)
-            await willkommen_nachricht2.add_reaction('⚔')
-            await willkommen_nachricht2.add_reaction('🎳')
-            await willkommen_nachricht2.add_reaction('💡')
-            await willkommen_nachricht2.add_reaction('📁')
-            await willkommen_nachricht2.add_reaction('🐘')
-            await willkommen_nachricht2.add_reaction('💼')
-            await willkommen_nachricht2.add_reaction('🦉')
-            await willkommen_nachricht2.add_reaction('⚡')
-            await willkommen_nachricht2.add_reaction('👴')
-
-            embed_willkommen3 = discord.Embed(color=0x11ff00)
-            embed_willkommen3.add_field(name="👎 für Klasse 8c", value="🌐 für Klasse 8d", inline=True)
-            embed_willkommen3.add_field(name="🏈 für Jahrgang 8", value="-", inline=True)
-            embed_willkommen3.add_field(name="🏺 für Klasse 9a", value="🍍 für Klasse 9b", inline=True)
-            embed_willkommen3.add_field(name="🎣 für Klasse 9c", value="💎 für Klasse 9d", inline=True)
-            embed_willkommen3.add_field(name="⚓ für Jahrgang 9", value="📶 für Klasse 10a", inline=True)
-            embed_willkommen3.add_field(name="🔥 für Klasse 10b", value="👀 für Klasse 10c", inline=True)
-            willkommen_nachricht3=await willkommen_channel.send(embed=embed_willkommen3)
-            await willkommen_nachricht3.add_reaction('👎')
-            await willkommen_nachricht3.add_reaction('🌐')
-            await willkommen_nachricht3.add_reaction('🏈')
-            await willkommen_nachricht3.add_reaction('🏺')
-            await willkommen_nachricht3.add_reaction('🍍')
-            await willkommen_nachricht3.add_reaction('🎣')
-            await willkommen_nachricht3.add_reaction('💎')
-            await willkommen_nachricht3.add_reaction('⚓')
-            await willkommen_nachricht3.add_reaction('📶')
-            await willkommen_nachricht3.add_reaction('🔥')
-            await willkommen_nachricht3.add_reaction('👀')
+                print('Fehler beim Löschen')
+            print(willkommen_channel)
+            embed_willkommen_nachricht =discord.Embed(title="Willkommen:", description='''**Willkommen auf dem Paul von Denis Realschule Plus und Fachoberschule Server. Bitte reagiere auf einen dieser Nachrichten um Rechte auf dem Server zu bekommen, sowie deiner Klasse zugeordnet zu werden. Dieser Server wird von Schüler der Schule geführt.**''', color=0x11ff00)
+            await willkommen_channel.send(embed=embed_willkommen_nachricht)
 
 
-            embed_willkommen4 = discord.Embed(color=0x11ff00)
-            embed_willkommen4.add_field(name="💙 für Klasse 10d", value="❗ für Jahrgang 10", inline=True)
-            embed_willkommen4.add_field(name="🏝 für Klasse 11a", value="👽 für Klasse 11b", inline=True)
-            embed_willkommen4.add_field(name="⛏ für Jahrgang 11", value="🚗 für Klasse 12a", inline=True)
-            embed_willkommen4.add_field(name="🥑 für Klasse 12b", value="🦄 für Jahrgang 12", inline=True)
-            embed_willkommen4.add_field(name="✈ für Realschule Plus", value="🛁 für FOS", inline=True)
-            willkommen_nachricht4=await willkommen_channel.send(embed=embed_willkommen4)
-            await willkommen_nachricht4.add_reaction('💙')
-            await willkommen_nachricht4.add_reaction('❗')
-            await willkommen_nachricht4.add_reaction('🏝')
-            await willkommen_nachricht4.add_reaction('👽')
-            await willkommen_nachricht4.add_reaction('⛏')
-            await willkommen_nachricht4.add_reaction('🚗')
-            await willkommen_nachricht4.add_reaction('🥑')
-            await willkommen_nachricht4.add_reaction('🦄')
-            await willkommen_nachricht4.add_reaction('✈')
-            await willkommen_nachricht4.add_reaction('🛁')
-
+            for x in range(3):
+                embed_willkommen_nachricht_rollen = discord.Embed(color=0x11ff00)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][0], value=message_content()[x][1], inline=True)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][2], value=message_content()[x][3], inline=True)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][4], value=message_content()[x][5], inline=True)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][6], value=message_content()[x][7], inline=True)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][8], value=message_content()[x][9], inline=True)
+                embed_willkommen_nachricht_rollen .add_field(name=message_content()[x][10], value='-', inline=True)
+                embed_willkommen_nachricht_rollen  = await willkommen_channel.send(embed=embed_willkommen_nachricht_rollen )
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][0])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][1])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][2])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][3])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][4])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][5])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][6])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][7])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][8])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][9])
+                await embed_willkommen_nachricht_rollen.add_reaction(message_emoji()[x][10])
 
         except Exception as error_willkommen:
             print("Fehler bei der Willkommensnachricht: ")
@@ -181,7 +139,7 @@ async def aufgabe():
 @client.event
 async def on_reaction_add(reaction, user):
     reaction_von_channel = reaction.message.channel.id
-    if reaction_von_channel == channel_ids("willkommen_channel_id"):
+    if reaction_von_channel == channel_id_infomation("willkommen_channel_id"):
 # Rolenprüfung | Role checking
 
         if user == client.user:
@@ -376,13 +334,13 @@ async def on_message(message):
 # --------------------------------------------------------------------------------------------------------
 
     message_von_channel = message.channel.id
-    if message_von_channel == channel_ids("channel_id_rating_person"):
+    if message_von_channel == channel_id_infomation("channel_id_rating_person"):
         for x in range(13):
             await message.add_reaction(reaction_to_pictures()[x])
-    elif message_von_channel == channel_ids("channel_id_rating_car"):
+    elif message_von_channel == channel_id_infomation("channel_id_rating_car"):
         for x in range(13):
             await message.add_reaction(reaction_to_pictures()[x])
-    elif message_von_channel == channel_ids("channel_id_setup_rating"):
+    elif message_von_channel == channel_id_infomation("channel_id_setup_rating"):
         for x in range(13):
             await message.add_reaction(reaction_to_pictures()[x])
 
