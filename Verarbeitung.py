@@ -49,6 +49,6 @@ def channel_ids(channel):
     "channel_id_rating_car","channel_id_setup_rating"]
     channel_ids = [channel_ids ...]
 
-    for x in range(4):
+    for x in range(len(channel_namen)):
         if channel == channel_namen[x]:
             return channel_ids[x]
