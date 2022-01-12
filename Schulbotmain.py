@@ -103,7 +103,10 @@ async def aufgabe():
             willkommen_channel = client.get_channel(channel_ids("willkommen_channel_id"))
 
 #Zum Löschen der alten Nachrichten
-            await willkommen_channel.purge()
+            try:
+                await willkommen_channel.purge()
+            except:
+                print('Fehler beim löschen')
 
             embed_willkommen1 =discord.Embed(title="Willkommen:", description='''**Willkommen auf dem Paul von Denis Realschule Plus und Fachoberschule Server. Bitte reagiere auf einen dieser Nachrichten um Rechte auf dem Server zu bekommen, sowie deiner Klasse zugeordnet zu werden. Dieser Server wird von Schüler der Schule geführt.**''', color=0x11ff00)
             embed_willkommen1.add_field(name="👍 für Member", value ="🐻 für Developer", inline = True)
