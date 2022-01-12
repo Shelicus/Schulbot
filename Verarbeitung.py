@@ -43,12 +43,42 @@ def reaction_to_pictures():
     reactions = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣','🔟','❤','🥵','😍']
     return reactions
 
-def channel_ids(channel):
+def channel_id_infomation(channel):
     # Channels IDs
     channel_namen = ["willkommen_channel_id","channel_id_rating_person",
     "channel_id_rating_car","channel_id_setup_rating"]
-    channel_ids = [channel_ids ...]
+    channel_id_liste = [channel_ids...]                                                                                             #Channel id
 
     for x in range(len(channel_namen)):
         if channel == channel_namen[x]:
-            return channel_ids[x]
+            return channel_id_liste[x]
+
+def message_content():
+    liste_v = []
+    liste_send = []
+    message_liste = ["👍 für Member","🐻 für Developer","🐬 für Streamer","⚔ für Jahrgang 5","🎳 für Jahrgan 6",
+                     "💡 für Klasse 7a","📁 für Klasse 7b","🐘 für Klasse 7c","💼 für Klasse 7d","🦉 für Jahrgang 7",
+                      "⚡  für Klasse 8a","👴 für Klasse 8b","👎 für Klasse 8c","🌐 für Klasse 8d","🏈 für Jahrgang 8",
+                      "🏺 für Klasse 9a","🍍 für Klasse 9b","🎣 für Klasse 9c","💎 für Klasse 9d","⚓ für Jahrgang 9",
+                      "📶 für Klasse 10a","🔥 für Klasse 10b","👀 für Klasse 10c","💙 für Klasse 10d","❗ für Jahrgang 10",
+                      "🏝 für Klasse 11a","👽 für Klasse 11b","⛏ für Jahrgang 11","🚗 für Klasse 12a","🥑 für Klasse 12b",
+                      "🦄 für Jahrgang 12","✈ für Realschule Plus","🛁 für FOS"]
+    for t in range(3):
+        for r in range(11):
+            liste_v.append(message_liste[r+(11*t)])
+        liste_send.append(liste_v)
+        liste_v = []
+    return liste_send
+
+def message_emoji():
+    liste_v = []
+    liste_send = []
+    emeoji_liste = ['👍','🐻','🐬','⚔','🎳','💡','📁','🐘','💼','🦉','⚡','👴','👎','🌐','🏈','🏺','🍍','🎣','💎','⚓','📶',
+                    '🔥','👀','💙','❗','🏝','👽','⛏','🚗','🥑','🦄','✈','🛁']
+
+    for t in range(3):
+        for r in range(11):
+            liste_v.append(emeoji_liste[r+(11*t)])
+        liste_send.append(liste_v)
+        liste_v = []
+    return liste_send
