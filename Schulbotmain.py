@@ -101,6 +101,7 @@ async def aufgabe():
             willkommen_channel = client.get_channel(channel_informationen_id('willkommen_channel'))
 #Zum Löschen der alten Nachrichten
             try:
+                await client.wait_until_ready()
                 await willkommen_channel.purge()
                 
             except:
