@@ -132,7 +132,7 @@ der Benutzung des Projektes die Zustimmung eingeholt werden.
 |:x:|![Lizenz_drei](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png)|Namensnennung-Keine Bearbeitungen 4.0 International|[Details](https://creativecommons.org/licenses/by-nd/4.0/legalcode.de)|
 |:x:|![Lizenz_vier](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.eu.png)|Namensnennung-Nicht kommerziell 4.0 International|[Details](https://creativecommons.org/licenses/by-nc/4.0/legalcode.de)|
 |:heavy_check_mark:|![Lizenz_fünf](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.eu.png)|	Namensnennung-Nicht kommerziell-Share Alike 4.0 International|[Details](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.de)|
-|:x:|![Lizenz_sex](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.eu.png)|	Namensnennung-Nicht kommerziell-Keine Bearbeitungen 4.0 International|[Details](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.de)|
+|:x:|![Lizenz_sechs](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.eu.png)|	Namensnennung-Nicht kommerziell-Keine Bearbeitungen 4.0 International|[Details](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.de)|
 
 > Verwendete Lizenz: :heavy_check_mark: Nicht verwendete Lizenz: :x:
 
