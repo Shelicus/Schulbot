@@ -19,7 +19,7 @@ Dieser Bot wurde Entwickelt um den [Discord-Server]( https://discord.gg/92sdCZvs
 * [Kompatibilität](#Kompatibilität)
   * [Client Betriebsysteme](#Client-Betriebsysteme)
   * [Server Betriebsysteme](#Server-Betriebsysteme)
-  * [Komiler Version](#Kompiler-Version)
+  * [Kompiler Version](#Kompiler-Version)
   * [Verwendete Bibliotheken](#Verwendete-Bibliotheken)
 * [Lizenz](#Lizenz)
 * [Mitwirkende](#Mitwirkende)
