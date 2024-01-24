@@ -3,7 +3,8 @@
 
 
 ## Beschreibung:
-Dieser Bot wurde Entwickelt um den [Discord-Server]( https://discord.gg/92sdCZvsMY) der FOS von Schifferstadt zu verwalten. Hierbei Verwaltet der Bot die Rollenzuweisung der einzelnen Klassen und besitzt kleine extra Funktionen u.a. eine Schnittstelle zu einer Wetter API. 
+Dieser Bot wurde Entwickelt um den [Discord-Server]( https://discord.gg/92sdCZvsMY) der FOS von Schifferstadt zu verwalten. Hierbei Verwaltet der Bot die Rollenzuweisung der einzelnen Klassen und besitzt kleine extra Funktionen u.a. eine Schnittstelle zu einer Wetter API.
+Wird leider nicht mehr gewartet und ist nur noch in read-only.  
 
 
 ## Verzeichnis:
