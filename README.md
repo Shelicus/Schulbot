@@ -140,4 +140,4 @@ der Benutzung des Projektes die Zustimmung eingeholt werden.
 
 # Mitwirkende:
 
-clurky (Alina), Shelicus (David) 
+clurky (Alina), Shelicus (David)
